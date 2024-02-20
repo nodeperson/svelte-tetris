@@ -67,7 +67,7 @@ function increaseSpeed() {
     const deltaHeartbeat = heartbeats / levels;
     const newHeartbeat = Math.floor(heartbeat - deltaHeartbeat);
     heartbeat = Math.max(MinHeartbeat, newHeartbeat);
-    if (heartbeat > oldHeartbeat) {
+    if (heartbeat < oldHeartbeat) {
         stop();
         run();
     }
